@@ -10,7 +10,7 @@ namespace API.Controllers;
 public class   UsersController(DataContext context) : BaseApiController{
     private readonly DataContext _context = context;
 
-
+[AllowAnonymous]
 [HttpGet]
     public async Task <ActionResult<IEnumerable<AppUser>>> GetUsers()
 {
